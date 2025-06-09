@@ -1,100 +1,81 @@
 :root {
-  --bg: #f0f0f0;
-  --text: #222;
-  --accent: #007bff;
-  --card-bg: #ffffff;
-  --shadow: rgba(0, 0, 0, 0.1);
-  --radius: 1rem;
-}
-
-body.dark {
-  --bg: #121212;
-  --text: #eee;
-  --accent: #4dabf7;
-  --card-bg: #1e1e1e;
-  --shadow: rgba(255, 255, 255, 0.1);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --bg-color: #f4f4f4;
+  --text-color: #111;
+  --accent-color: #333;
+  --bubble-color: #e0e0e0;
+  --bubble-hover: #ccc;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  padding: 20px;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   transition: background 0.3s, color 0.3s;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 2rem;
+.dark-mode {
+  --bg-color: #111;
+  --text-color: #f4f4f4;
+  --accent-color: #ddd;
+  --bubble-color: #222;
+  --bubble-hover: #333;
 }
 
-.header-top {
+header {
+  background: var(--accent-color);
+  padding: 1rem 2rem;
+  color: var(--bg-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#toggle-theme {
-  background: none;
-  border: none;
+nav h1 {
+  margin: 0;
   font-size: 1.5rem;
+}
+
+#theme-toggle {
+  padding: 0.5rem 1rem;
   cursor: pointer;
+}
+
+.intro {
+  text-align: center;
+  margin: 2rem 1rem;
 }
 
 .profiles {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
+  padding: 2rem;
 }
 
-.profile-card {
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  box-shadow: 0 4px 10px var(--shadow);
-  padding: 20px;
+.bubble {
+  background: var(--bubble-color);
+  padding: 2rem;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  flex: 1 1 250px;
-  max-width: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px var(--shadow);
-}
-
-.profile-card h2 {
-  margin-bottom: 0.5rem;
-}
-
-.profile-card p {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-}
-
-.profile-card button {
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  background: var(--accent);
-  color: white;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.3s;
 }
 
-.profile-card button:hover {
-  background: #0056b3;
+.bubble:hover {
+  background: var(--bubble-hover);
+  transform: scale(1.05);
 }
 
 footer {
   text-align: center;
-  margin-top: 3rem;
-  font-size: 0.9rem;
+  padding: 1rem;
+  margin-top: 2rem;
 }
