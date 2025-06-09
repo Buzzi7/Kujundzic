@@ -1,46 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kujundžić Portfolio</title>
+  <title>Kujundžić Family Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <nav>
-      <h1>Kujundžić</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button id="theme-toggle">🌓</button>
-    </nav>
+    <div class="header-top">
+      <h1>Welcome to the Kujundžić Family Hub</h1>
+      <button id="toggle-theme">☀️</button>
+    </div>
+    <p>Select a profile to explore</p>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I'm Kujundžić. I'm a developer/designer/creator passionate about building things that make an impact.</p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <div id="project-list">
-        <!-- Projects will auto-load here -->
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Reach out at <a href="mailto:you@kujundzic.xyz">you@kujundzic.xyz</a></p>
-      <button onclick="window.location='mailto:you@kujundzic.xyz'">Email Me</button>
-    </section>
+  <main class="profiles">
+    <div class="profile-card" id="andrija">
+      <h2>Andrija</h2>
+      <p>test</p>
+      <button onclick="window.location='andrija.html'">View Profile</button>
+    </div>
+    <div class="profile-card" id="jelena">
+      <h2>Jelena</h2>
+      <p>test</p>
+      <button onclick="window.location='jelena.html'">View Profile</button>
+    </div>
+    <div class="profile-card" id="djordje">
+      <h2>Djordje</h2>
+      <p>test</p>
+      <button onclick="window.location='djordje.html'">View Profile</button>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Kujundžić</p>
+    <p>Contact us at <a href="mailto:andrija@kujundzic.xyz">andrija@kujundzic.xyz</a></p>
+    <p>© 2025 Kujundžić Family</p>
   </footer>
 
   <script src="script.js"></script>
