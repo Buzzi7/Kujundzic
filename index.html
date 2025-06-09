@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kujundžić Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -15,6 +15,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button id="theme-toggle">🌓</button>
     </nav>
   </header>
 
@@ -26,19 +27,14 @@
 
     <section id="projects">
       <h2>Projects</h2>
-      <div class="project">
-        <h3>Project Title</h3>
-        <p>Short description of the project. <a href="#">View on GitHub →</a></p>
-      </div>
-      <div class="project">
-        <h3>Another Project</h3>
-        <p>Another short project blurb. <a href="#">See live demo →</a></p>
+      <div id="project-list">
+        <!-- Projects will auto-load here -->
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Feel free to reach out at <a href="mailto:you@kujundzic.xyz">you@kujundzic.xyz</a></p>
+      <p>Reach out at <a href="mailto:you@kujundzic.xyz">you@kujundzic.xyz</a></p>
       <button onclick="window.location='mailto:you@kujundzic.xyz'">Email Me</button>
     </section>
   </main>
@@ -46,5 +42,7 @@
   <footer>
     <p>© 2025 Kujundžić</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
