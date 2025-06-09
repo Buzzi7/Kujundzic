@@ -1,84 +1,116 @@
-/* style.css - minimalist light grey theme */
-body {
-  font-family: sans-serif;
+:root {
+  --bg-light: #f5f5f5;
+  --bg-dark: #1e1e1e;
+  --text-light: #1a1a1a;
+  --text-dark: #f0f0f0;
+  --accent: #007bff;
+  --transition: 0.3s ease;
+}
+
+[data-theme="light"] {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+}
+
+[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+}
+
+* {
   margin: 0;
-  background-color: #f5f5f5;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background var(--transition), color var(--transition);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
   line-height: 1.6;
+  padding: 20px;
 }
 
-header {
-  background: #e0e0e0;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #ccc;
-}
-
-nav {
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 nav h1 {
-  margin: 0;
+  font-size: 1.8em;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
+  gap: 15px;
 }
 
-nav a {
+nav ul li a {
   text-decoration: none;
-  color: #333;
-  transition: color 0.2s;
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
-nav a:hover {
-  color: #007acc;
+nav ul li a:hover {
+  background: var(--accent);
+  color: white;
+}
+
+#theme-toggle {
+  padding: 6px 12px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-size: 1.2em;
 }
 
 main {
-  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  padding-top: 40px;
 }
 
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 50px;
 }
 
 .project {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 15px;
   border-radius: 8px;
-  transition: transform 0.2s;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
 .project:hover {
-  transform: translateY(-2px);
+  transform: scale(1.02);
+  background-color: var(--accent);
+  color: white;
 }
 
 button {
-  background: #007acc;
-  color: #fff;
+  padding: 10px 20px;
   border: none;
-  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background-color: var(--accent);
+  color: white;
   cursor: pointer;
-  border-radius: 4px;
   transition: background 0.3s;
 }
 
 button:hover {
-  background: #005f99;
+  background-color: #0056b3;
 }
 
 footer {
   text-align: center;
-  padding: 1rem;
-  background: #e0e0e0;
-  border-top: 1px solid #ccc;
+  padding: 20px 0;
+  font-size: 0.9em;
+  opacity: 0.6;
 }
