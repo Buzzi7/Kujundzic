@@ -2,39 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kujundžić Family Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="header-top">
-      <h1>Welcome to the Kujundžić Family Hub</h1>
-      <button id="toggle-theme">☀️</button>
-    </div>
-    <p>Select a profile to explore</p>
+    <nav>
+      <h1>Kujundžić</h1>
+      <button id="theme-toggle">Toggle Dark Mode</button>
+    </nav>
   </header>
 
-  <main class="profiles">
-    <div class="profile-card" id="andrija">
-      <h2>Andrija</h2>
-      <p>test</p>
-      <button onclick="window.location='andrija.html'">View Profile</button>
-    </div>
-    <div class="profile-card" id="jelena">
-      <h2>Jelena</h2>
-      <p>test</p>
-      <button onclick="window.location='jelena.html'">View Profile</button>
-    </div>
-    <div class="profile-card" id="djordje">
-      <h2>Djordje</h2>
-      <p>test</p>
-      <button onclick="window.location='djordje.html'">View Profile</button>
-    </div>
+  <main>
+    <section class="intro">
+      <h2>Welcome to Our Portfolio</h2>
+      <p>Choose who you'd like to learn about:</p>
+    </section>
+
+    <section class="profiles">
+      <div class="bubble" onclick="location.href='andrija.html'">
+        <h3>Andrija</h3>
+        <p>test</p>
+      </div>
+      <div class="bubble" onclick="location.href='jelena.html'">
+        <h3>Jelena</h3>
+        <p>test</p>
+      </div>
+      <div class="bubble" onclick="location.href='djordje.html'">
+        <h3>Djordje</h3>
+        <p>test</p>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>Contact us at <a href="mailto:andrija@kujundzic.xyz">andrija@kujundzic.xyz</a></p>
     <p>© 2025 Kujundžić Family</p>
   </footer>
 
